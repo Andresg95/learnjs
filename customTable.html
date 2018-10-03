@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Table</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    const checkNum=(value)=>{
+      if(isNaN(value)){
+        alert("please enter only numbers");
+        location.reload();
+      }else{
+        return parseInt(value);
+      }
+    };
+
+
+    const getData=()=>{
+
+      let size = parseInt(document.getElementById("tableAmount").value);
+      let start = parseInt(document.getElementById("start").value);
+      let finish = parseInt(document.getElementById("end").value);
+
+      PaintTable(checkNum(size),checkNum(start),checkNum(finish));
+    };
+
+
+    const PaintTable=(size, start, finish)=>{
+          let button = document.createElement("BUTTON");
+          let textNode = document.createTextNode("Go again? ");
+          button.appendChild(textNode);
+          button.setAttribute("onclick", "location.reload()");
+
+        for(start; start<=finish; start++){
+            document.write(start+"x"+size+"="+start*size+".</br>");
+
+          }
+
+          document.body.appendChild(button);
+    };
+
+
+</script>
+
+
+    <input type="text" id="tableAmount" name="" value="" placeholder="Number to multiply:"> <br>
+    <input type="text" id="start" value="" placeholder="Start?"><br>
+    <input type="text" id="end" name="" value="" placeholder="End?"><br>
+
+    <button type="button" name="button" onclick="getData()">GO!</button>
+
+  </body>
+</html>

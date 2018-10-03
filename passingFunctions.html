@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ex2 passing functions</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+
+
+
+
+
+
+    const toCentigrade = (degFah)=> {
+          let degCent = (5/9)* (degFah-32);
+          degCent = degCent.toFixed(2); //reduced decimals
+
+            document.write("Deg Fah "+ degFah+" is "+degCent+" in celcius. </br>");
+    };
+
+    const toFahrenheit = (degCel)=> {
+          let degFah = (9/5)* (degCel+32);
+          degFah = degFah.toFixed(2); //reduced decimals
+            document.write("Deg celcius "+ degCel+" is "+degFah+" in fahrenheit. </br>");
+    };
+
+
+    const convert = (converter, temperature) =>{
+      return converter(temperature);
+    };
+
+
+        convert(toCentigrade, 90);
+        convert(toFahrenheit, 21);
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

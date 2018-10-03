@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ex1 </title>
+  </head>
+  <body>
+    <script>
+
+const getData=()=>{
+  let box = parseInt(document.getElementById("data").value);
+  console.log(box);
+  convertToCentigrade(box);
+};
+
+
+    const convertToCentigrade = (degFah)=> {
+      let degCent = (5/9)* (degFah-32);
+      alert(degCent);
+      return degCent;
+    };
+
+    </script>
+
+    <input type="text" id="data" name="" value="" placeholder="value f here">
+    <button type="button" id="run "name="button" onclick="getData()">haz click aquí</button>
+
+
+
+  </body>
+</html>
