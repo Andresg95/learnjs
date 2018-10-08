@@ -1,0 +1,64 @@
+(http headers.) 
+Chrome app =(HTTP headers)
+
+Request to a web server, and response with a resource.
+json, xml, image, html.
+
+URL = uniform resource locator.
+
+Api= useful methods, functions.
+
+Format for request
+RestApiUrL + Api method +  parameters;
+
+https://api.flickr.com/services/rest/  +  ?method= flickr.photos.getinfo + &photo_id=2079357948;
+
+API keys -- Track how many request are made to the api to prevent spam
+
+format: json. 
+
+clevertechie.com //info.
+apigee.com // website with api´s listings.
+https://whatismyipaddress.com/learning/vpns-proxies
+http://expressjs.com/
+
+ajax calls, 
+timeouts,
+network calls
+file access
+
+
+Response codes
+OK 200
+The request was fulfilled
+
+Bad request 400
+The request had bad syntax or was inherently impossible to be satisfied.
+
+Unauthorized 401
+The parameter to this message gives a specification of authorization 
+schemes which are acceptable. The client should retry the request with 
+a suitable Authorization header.
+
+PaymentRequired 402
+The parameter to this message gives a specification of charging 
+schemes acceptable. The client may retry the request 
+with a suitable ChargeTo header.
+
+Forbidden 403
+The request is for something forbidden. Authorization will not help.
+
+Internal Error 500
+The server encountered an unexpected condition which 
+prevented it from fulfilling the request.
+
+
+Gateway timeout 503 (TO BE DISCUSSED)
+This is equivalent to Internal Error 500, 
+but in the case of a server which is in turn accessing some other service,
+ this indicates that the respose from the other 
+service did not return within a time that the gateway was prepared 
+to wait. As from the point of view of the clientand the HTTP
+transaction the other service is hidden within the server, 
+this maybe treated identically to Internal error 500, 
+but has more diagnostic value.
